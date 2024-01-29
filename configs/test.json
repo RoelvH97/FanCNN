@@ -1,0 +1,64 @@
+{
+  "GENERAL": {
+    "gpu": 5,
+    "mode": "test",
+    "name": "test_FanCNN",
+    "seed": 0
+  },
+  "DATA": {
+    "dir": "/home/roel/data",
+    "dir_img": "/home/roel/data/ASOCA_Philips/images",
+    "dir_ctl": "/home/roel/data/ASOCA_Philips/centerlines",
+    "fold": 0,
+    "normalize": true,
+    "pad": [7, 7, 10]
+  },
+  "MODEL": {
+    "aggregate": "mean_max",
+    "dil_theta": [1, 1, 1, 1, 1, 1, 1],
+    "dil_z": [1, 1, 1, 1, 1, 1, 1],
+    "dim": 16,
+    "dim_max": 64,
+    "dr": 0.1,
+    "dz": 0.5,
+    "load": "old",
+    "loss": "FanLoss",
+    "loss_kwargs": {
+      "cls": "CrossEntropyLoss",
+      "inner": "MSELoss",
+      "outer": "WeightedL1Loss"
+    },
+    "n_channels": 1,
+    "n_classes": 4,
+    "n_groups": 4,
+    "n_layers": 7,
+    "n_rad": 32,
+    "n_theta": 48,
+    "name": "TestFanCNN",
+    "ps": 127,
+    "weights": [
+      "Sep16_14-20-49_geer",
+      "Sep16_14-21-07_geer",
+      "Sep16_14-21-24_geer",
+      "Sep16_14-21-43_geer",
+      "Sep16_14-22-03_geer"]
+  },
+  "OPTIMIZATION": {
+    "batch_size": 32,
+    "clip_grad": 0.1,
+    "eval_every": 10,
+    "lr_policy": "MultiStepLR",
+    "n_iter": 6000,
+    "n_workers": 0,
+    "name": "AdamW",
+    "pin_memory": false,
+    "resume": false,
+    "OPTIMIZER": {
+      "lr": 1e-2
+    },
+    "SCHEDULER": {
+      "gamma": 0.1,
+      "milestones": [3000, 4000, 5000]
+    }
+  }
+}

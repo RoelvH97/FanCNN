@@ -1,0 +1,29 @@
+{
+  "GENERAL": {
+    "gpu": 0,
+    "mode": "test",
+    "name": "test_CADRADS_pred",
+    "seed": 0
+  },
+  "DATA": {
+    "batch_size": 256,
+    "cleaned": true,
+    "cutoff": true,
+    "dir": "/home/roel/data",
+    "dir_signal": "/home/roel/output",
+    "normalize": true
+  },
+  "MODEL": {
+    "block": "BasicBlock",
+    "conv_width": 8,
+    "layers": [1, 1, 1, 0],
+    "n_channels": 2,
+    "n_classes": 5,
+    "weights": [
+      "Oct21_11-11-54_geer",
+      "Oct21_11-12-15_geer",
+      "Oct21_11-12-32_geer",
+      "Oct21_11-13-23_geer",
+      "Oct21_12-09-43_geer"]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "GENERAL": {
+    "gpu": 0,
+    "mode": "train",
+    "name": "train_FanCNN",
+    "seed": 0
+  },
+  "DATA": {
+    "dir": "/home/roel/data",
+    "fold": 0,
+    "normalize": true,
+    "pad": [7, 7, 10]
+  },
+  "MODEL": {
+    "dil_theta": [1, 1, 1, 1, 1, 1, 1],
+    "dil_z": [1, 1, 1, 1, 1, 1, 1],
+    "dim": 16,
+    "dim_max": 64,
+    "dr": 0.1,
+    "dz": 0.5,
+    "loss": "FanLoss",
+    "loss_kwargs": {
+      "cls": "CrossEntropyLoss",
+      "inner": "MSELoss",
+      "outer": "WeightedL1Loss"
+    },
+    "n_channels": 1,
+    "n_classes": 4,
+    "n_groups": 4,
+    "n_layers": 7,
+    "name": "FanCNN"
+  },
+  "OPTIMIZATION": {
+    "batch_size": 32,
+    "clip_grad": 0.1,
+    "eval_every": 10,
+    "lr_policy": "MultiStepLR",
+    "n_iter": 6000,
+    "n_workers": 0,
+    "name": "AdamW",
+    "pin_memory": false,
+    "resume": false,
+    "OPTIMIZER": {
+      "lr": 1e-2
+    },
+    "SCHEDULER": {
+      "gamma": 0.1,
+      "milestones": [3000, 4000, 5000]
+    }
+  }
+}

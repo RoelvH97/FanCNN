@@ -1,6 +1,5 @@
 # FanCNN for plaque quantification
-Code for the paper _Automatic Coronary Artery Plaque Quantification and CAD-RADS Prediction using Mesh Priors_, van Herten et al. 2023, IEEE Transactions on Medical Imaging ([link to the paper](https://ieeexplore.ieee.org/abstract/document/10288599), [arXiv](https://arxiv.org/abs/2310.11297))
- (IEE-TMI).
+Code for the paper _Automatic Coronary Artery Plaque Quantification and CAD-RADS Prediction using Mesh Priors_, van Herten et al. 2023, IEEE Transactions on Medical Imaging (IEE-TMI) ([link to the paper](https://ieeexplore.ieee.org/abstract/document/10288599), [arXiv](https://arxiv.org/abs/2310.11297)).
 
 This code uses coronary artery centerline priors to create mesh segmentations of the coronary artery lumen, as well as calcified and non-calcified plaque. The mesh segmentations are used to compute plaque volumes and to predict the CAD-RADS score.
 
